@@ -16,7 +16,7 @@ https://s3-eu-west-1.amazonaws.com/olio-staging-images/developer/test-articles-v
 
 Clone the repo using the following command:
 ```
-git clone <url>
+git clone git@github.com:cgreenwood/olio-test.git
 ```
 
 Install bundler and gems:

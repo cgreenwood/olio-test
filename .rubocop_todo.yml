@@ -43,6 +43,9 @@ Layout/SpaceInsidePercentLiteralDelimiters:
   Exclude:
     - 'Gemfile'
 
+Metrics/BlockLength:
+  Max: 30
+
 # Offense count: 1
 # Configuration parameters: AllowedMethods, AllowedPatterns, IgnoredMethods.
 Metrics/CyclomaticComplexity:
@@ -57,6 +60,10 @@ Metrics/MethodLength:
 # Configuration parameters: AllowedMethods, AllowedPatterns, IgnoredMethods.
 Metrics/PerceivedComplexity:
   Max: 9
+
+Rails/FilePath:
+  Exclude:
+    - 'lib/tasks/cucumber.rake'
 
 # Offense count: 2
 # This cop supports unsafe autocorrection (--autocorrect-all).
