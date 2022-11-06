@@ -1,2 +1,38 @@
-%li
-    = article
+.col-12
+    .card.mt-3
+        .card-body 
+            .row
+                .col-2
+                    = image_tag article.photos.first.files.medium, class: 'card-img-top'
+                .col-9
+                    %h5= article.title
+                    %p 
+                        %strong Description:
+                        = article.description
+                    %p
+                        %strong Collection notes:
+                        = article.collection_notes
+                    %p
+                        %strong Location:
+                        #{article.location.town}, #{article.location.country}
+                    %small
+                        Posted #{posted_date(article.created_at)} by #{article.user.first_name}
+                        = article.id
+                .col-1.text-center
+                    .row 
+                        .col-12
+                            = form_tag like_path do 
+                                = hidden_field_tag :rated_object_id, article.id
+                                = hidden_field_tag :value, 1
+                                %button{type: 'submit', class: 'btn btn-link like-link'}
+                                    %h4
+                                        %i.fa-solid.fa-heart
+                        .col-12
+                            - total_likes = article.reactions.likes +  ratings.where(rated_object_id: article.id).first&.total_likes.to_i
+                            %h5{ title: "#{total_likes} likes" }= total_likes
+                        .col-12
+                            %h4
+                                %i.fa-solid.fa-eye
+                        .col-12
+                            %h5{ title: "#{article.reactions.views} views" }= article.reactions.views
+                

@@ -1,0 +1,15 @@
+@import 'bootstrap/scss/bootstrap';
+@import 'bootstrap-icons/font/bootstrap-icons';
+
+.like-link {
+    color: red;
+}
+
+.like-link:hover {
+    color: red;
+}
+
+.like-link:hover i{
+    transform: scale(1.2);
+}
+

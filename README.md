@@ -5,6 +5,10 @@ This file includes all the things you need to get this application up and runnin
 List of articles from:
 https://s3-eu-west-1.amazonaws.com/olio-staging-images/developer/test-articles-v4.json
 
+TODO:
+ - tests
+ - handling for bad articles
+ - article helper method for total likes
 
 ## System dependencies
 
@@ -12,6 +16,9 @@ https://s3-eu-west-1.amazonaws.com/olio-staging-images/developer/test-articles-v
 - Rails 7.0.4
 - Postgres
 
+### System setup
+
+TODO: How to install rvm, ruby, rails and postgres on Linux?
 ## Setup
 
 Clone the repo using the following command:
@@ -40,7 +47,7 @@ rake db:setup
 
 Start the application:
 ```
-rails s
+bin/dev
 ```
 
 Open the application by going to http://localhost:3000
