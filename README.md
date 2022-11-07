@@ -15,9 +15,9 @@ Known issues:
 
 ## System setup
 
-Install RVM and ruby using this (guide)[https://www.digitalocean.com/community/tutorials/how-to-install-ruby-on-rails-with-rvm-on-ubuntu-20-04]
+Install RVM and ruby using this [guide](https://www.digitalocean.com/community/tutorials/how-to-install-ruby-on-rails-with-rvm-on-ubuntu-20-04)
 
-Install Postgres using this (guide)[https://www.digitalocean.com/community/tutorials/how-to-use-postgresql-with-your-ruby-on-rails-application-on-ubuntu-20-04]
+Install Postgres using this [guide](https://www.digitalocean.com/community/tutorials/how-to-use-postgresql-with-your-ruby-on-rails-application-on-ubuntu-20-04)
 
 ## Setup
 
