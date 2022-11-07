@@ -17,7 +17,6 @@
                         #{article.location&.town}, #{article.location&.country}
                     %small
                         Posted #{posted_date(article.created_at)} by #{article.user&.first_name}
-                        = article.id
                 .col-1.text-center
                     .row 
                         .col-12
