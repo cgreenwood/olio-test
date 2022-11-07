@@ -3,7 +3,7 @@
         .card-body 
             .row
                 .col-2
-                    = image_tag article.photos.first.files.medium, class: 'card-img-top'
+                    = image_tag article.photos&.first&.files&.medium, class: 'card-img-top'
                 .col-9
                     %h5= article.title
                     %p 
@@ -14,9 +14,9 @@
                         = article.collection_notes
                     %p
                         %strong Location:
-                        #{article.location.town}, #{article.location.country}
+                        #{article.location&.town}, #{article.location&.country}
                     %small
-                        Posted #{posted_date(article.created_at)} by #{article.user.first_name}
+                        Posted #{posted_date(article.created_at)} by #{article.user&.first_name}
                         = article.id
                 .col-1.text-center
                     .row 
@@ -28,11 +28,11 @@
                                     %h4
                                         %i.fa-solid.fa-heart
                         .col-12
-                            - total_likes = article.reactions.likes +  ratings.where(rated_object_id: article.id).first&.total_likes.to_i
+                            - total_likes = article.reactions&.likes.to_i + ratings.where(rated_object_id: article.id).first&.total_likes.to_i
                             %h5.like-counter{ title: "#{total_likes} likes" }= total_likes
                         .col-12
                             %h4
                                 %i.fa-solid.fa-eye
                         .col-12
-                            %h5{ title: "#{article.reactions.views} views" }= article.reactions.views
+                            %h5{ title: "#{article.reactions&.views} views" }= article.reactions&.views.to_i
                 

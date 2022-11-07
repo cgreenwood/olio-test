@@ -2,13 +2,10 @@
 
 This file includes all the things you need to get this application up and running locally for development/testing.
 
-List of articles from:
-https://s3-eu-west-1.amazonaws.com/olio-staging-images/developer/test-articles-v4.json
-
-TODO:
- - tests
- - handling for bad articles
- - article helper method for total likes
+Known issues:
+ - Bad handling of erroneous articles
+ - Limited tests, need tests for not happy path
+ - URLs are not stubbed for testing
 
 ## System dependencies
 
@@ -16,9 +13,12 @@ TODO:
 - Rails 7.0.4
 - Postgres
 
-### System setup
+## System setup
 
-TODO: How to install rvm, ruby, rails and postgres on Linux?
+Install RVM and ruby using this (guide)[https://www.digitalocean.com/community/tutorials/how-to-install-ruby-on-rails-with-rvm-on-ubuntu-20-04]
+
+Install Postgres using this (guide)[https://www.digitalocean.com/community/tutorials/how-to-use-postgresql-with-your-ruby-on-rails-application-on-ubuntu-20-04]
+
 ## Setup
 
 Clone the repo using the following command:
