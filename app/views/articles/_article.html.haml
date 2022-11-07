@@ -1,5 +1,5 @@
 .col-12
-    .card.mt-3
+    .card.mt-3.article-card
         .card-body 
             .row
                 .col-2
@@ -29,7 +29,7 @@
                                         %i.fa-solid.fa-heart
                         .col-12
                             - total_likes = article.reactions.likes +  ratings.where(rated_object_id: article.id).first&.total_likes.to_i
-                            %h5{ title: "#{total_likes} likes" }= total_likes
+                            %h5.like-counter{ title: "#{total_likes} likes" }= total_likes
                         .col-12
                             %h4
                                 %i.fa-solid.fa-eye
